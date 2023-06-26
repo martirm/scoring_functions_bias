@@ -75,7 +75,10 @@ BA_multi_level_scores_table <- function(block_sizes_UL=c(2,2,2,2), label_probs_L
 set.seed(1)
 multi_level_scores_BA <- BA_multi_level_scores_table(block_sizes_UL=c(2,2,2,2), label_probs_LL=rep(1/8, 8), 
                                                    b1=0.2, b3=.01, m=4, t_max=300, length.out=100)
+multi_level_scores_BA_large <- BA_multi_level_scores_table(block_sizes_UL=c(2,2,2,2,4,4,8,8), label_probs_LL=rep(1/8, 8), 
+                                                     b1=0.2, b3=.01, m=4, t_max=10000, length.out=100)
 save(multi_level_scores_BA, file="multi_level_BA_data.RData")
+save(multi_level_scores_BA_large, file="multi_level_BA_large_data.RData")
 
 
 

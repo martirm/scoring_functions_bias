@@ -71,8 +71,10 @@ reverse_y_scores <- c("conductance", "norm cut", "expansion")
 # Now just call the plotting functions with the selected scores
 plot_list_SBM <- lapply(selected_scores, plot_multi_level_score, data=multi_level_scores_SBM, invert_y=TRUE)
 plot_list_BA <- lapply(selected_scores, plot_multi_level_score, data=multi_level_scores_BA, invert_y=TRUE)
+plot_list_BA_large <- lapply(selected_scores, plot_multi_level_score, data=multi_level_scores_BA_large, invert_y=TRUE)
 do.call(grid_arrange_shared_legend, c(plot_list_SBM, list("ncol"=2, "nrow"=4))) #figure 3
 do.call(grid_arrange_shared_legend, c(plot_list_BA, list("ncol"=2, "nrow"=4))) #figure 6
+do.call(grid_arrange_shared_legend, c(plot_list_BA_large, list("ncol"=2, "nrow"=4))) #figure 7
 
 
         
